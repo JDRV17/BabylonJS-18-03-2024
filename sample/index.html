@@ -89,7 +89,7 @@
 
     BABYLON.SceneLoader.ImportMesh("", Assets.meshes.Yeti.rootUrl, Assets.meshes.Yeti.filename, scene, function (newMeshes) {newMeshes[0].scaling = new BABYLON.Vector3(0.1, 0.1, 0.1)});
 
-    BABYLON.SceneLoader.ImportMeshAsync("", "./", "worker.glb").then((result) => {
+    BABYLON.SceneLoader.ImportMeshAsync("", "./", "worker2.glb").then((result) => {
         result.meshes[1].position.x = 4;
         result.meshes[1].position.y = 10;
         result.meshes[1].material = roofMat;
