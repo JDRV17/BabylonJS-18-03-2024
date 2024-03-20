@@ -89,6 +89,16 @@
 
     BABYLON.SceneLoader.ImportMesh("", Assets.meshes.Yeti.rootUrl, Assets.meshes.Yeti.filename, scene, function (newMeshes) {newMeshes[0].scaling = new BABYLON.Vector3(0.1, 0.1, 0.1)});
 
+    BABYLON.SceneLoader.ImportMeshAsync("", "./", "worker.glb").then((result) => {
+        result.meshes[1].position.x = 4;
+        result.meshes[1].material = roofMat;
+        result.meshes[1].rotation.x = Math.PI / 3;
+        //const myMesh1 = scene.getMeshByName("myMesh_1");
+        //myMesh1.rotation.y = Math.PI / 2;
+        //myMesh1.material = roofMat;
+    });
+
+
     return scene;
 };
                 window.initFunction = async function() {
